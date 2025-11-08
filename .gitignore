@@ -1,0 +1,37 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+*.csv
+*.pid
+*.seed
+*.pid.lock
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# System files
+*.bak
+*.tmp
+
+# Compiled output
+/build
+/dist
