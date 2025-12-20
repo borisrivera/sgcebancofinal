@@ -289,6 +289,10 @@ Mejores Prácticas Implementadas
 
 ✅ **Swagger**
 
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tuusuario&langs_count=8&layout=compact&title_color=6FDA44&text_color=FFFFFF&theme=algolia" width="550" alt="Top Languages">
+</p>
+
 ## 👨‍💻 Author
 
 <div align="center">
