@@ -1,6 +1,6 @@
 <!-- header Animation -->
 <div align= "center"> 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=240&text=zMarco's%20GitHub&animation=fadeIn&fontColor=2a2828&fontSize=50" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=240&text=zMarco_hub%20GitHub&animation=fadeIn&fontColor=2a2828&fontSize=50" />
 </div>
 
 # Sistema de Gestión de Cursos y Estudiantes
@@ -288,6 +288,19 @@ Mejores Prácticas Implementadas
 ✅ **Tailwind CSS**
 
 ✅ **Swagger**
+
+## 👨‍💻 Author
+
+<div align="center">
+
+[![Marco](https://img.shields.io/badge/Marco-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marco)
+[![Alain](https://img.shields.io/badge/Alain-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alain)
+[![Boris](https://img.shields.io/badge/Boris-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/boris)
+[![Leonardo](https://img.shields.io/badge/Leonardo-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonardo)
+[![Omar](https://img.shields.io/badge/Omar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar)
+[![Luis](https://img.shields.io/badge/Luis-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis)
+
+</div>
 
 <!-- Footer Animation -->
 <div align="center">
