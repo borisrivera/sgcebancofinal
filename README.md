@@ -11,7 +11,7 @@
     <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="150">
   </p>
 
- <img src="https://readme-typing-svg.herokuapp.com?color=%236FDA44&size=30&center=true&vCenter=true&width=685&height=55&lines=Hola+somos+el+grupo+3+del+Diplomado;Full-Stack+Developer;Sistema+de+Gestion+de+Cursos+y+Estudiantes;" alt="Texto animado del Grupo 3 Full-Stack Developer - Sistema de Gestión de Cursos y Estudiantes" />
+ <img src="https://readme-typing-svg.herokuapp.com?color=%236FDA44&size=30&center=true&vCenter=true&width=690&height=55&lines=Hola+somos+el+grupo+3+del+Diplomado;Full-Stack+Developer;Sistema+de+Gestion+de+Cursos+y+Estudiantes;" alt="Texto animado del Grupo 3 Full-Stack Developer - Sistema de Gestión de Cursos y Estudiantes" />
 
 <br><br>
 
