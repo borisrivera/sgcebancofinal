@@ -293,12 +293,12 @@ Mejores Prácticas Implementadas
 
 <div align="center">
 
-[![Marco](https://img.shields.io/badge/Marco-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marco)
-[![Alain](https://img.shields.io/badge/Alain-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alain)
-[![Boris](https://img.shields.io/badge/Boris-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/boris)
-[![Leonardo](https://img.shields.io/badge/Leonardo-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonardo)
-[![Omar](https://img.shields.io/badge/Omar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar)
-[![Luis](https://img.shields.io/badge/Luis-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis)
+[![Marco](https://img.shields.io/badge/Marco-FF5733?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marco)
+[![Alain](https://img.shields.io/badge/Alain-33FF57?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alain)
+[![Boris](https://img.shields.io/badge/Boris-FF33A1?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/boris)
+[![Leonardo](https://img.shields.io/badge/Leonardo-FFB533?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonardo)
+[![Omar](https://img.shields.io/badge/Omar-33A1FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar)
+[![Luis](https://img.shields.io/badge/Luis-9C33FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis)
 
 </div>
 
