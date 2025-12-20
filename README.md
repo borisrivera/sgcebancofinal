@@ -1,5 +1,17 @@
 # Sistema de Gestión de Cursos y Estudiantes
 
+<div align="center">
+
+  <p align="center">
+    <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="150">
+  </p>
+
+  <img src="https://readme-typing-svg.herokuapp.com?color=%236FDA44&size=30&center=true&vCenter=true&width=672&height=55&lines=Hi+there+I+am+Salah+Eddine+Ghannouch;Full-Stack+Developer;Software+Engineering;" alt="Headline" />
+
+<br><br>
+
+  </div>
+
 Este proyecto es un **Sistema de Gestión de Cursos y Estudiantes** implementado con un **backend** usando **NestJS**, **PostgreSQL** como base de datos, y **TypeORM** como ORM. El **frontend** está desarrollado con **Angular 21** y **TailwindCSS 4**. El sistema permite la gestión de cursos, estudiantes, inscripciones, y evaluaciones de manera eficiente.
 
 # 🚀 Características del Proyecto
@@ -43,9 +55,9 @@ Este proyecto es un **Sistema de Gestión de Cursos y Estudiantes** implementado
 
 ### Frontend
 
-| ![Angular](https://raw.githubusercontent.com/tandpfun/skill-icons/master/icons/Angular-Dark.svg) | ![Tailwind](https://cdn.jsdelivr.net/gh/tandpfun/skill-icons@main/icons/TypeScript.svg) |
-| :----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
-|                                [Angular 21](https://angular.io/)                                 |                         [TailwindCSS](https://tailwindcss.com/)                         |
+| ![Angular](https://raw.githubusercontent.com/tandpfun/skill-icons/master/icons/Angular-Dark.svg) | ![Tailwind](https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/TailwindCSS-Dark.svg) |
+| :----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
+|                                [Angular 21](https://angular.io/)                                 |                                                 [TailwindCSS](https://tailwindcss.com/)                                                 |
 
 ## Requisitos
 
@@ -142,9 +154,7 @@ ng serve
 
 El frontend estará disponible en
 
-```bash
-http://localhost:4200.
-```
+http://localhost:4200
 
 # 🗄️ Configuración de la Base de Datos
 
@@ -164,19 +174,112 @@ http://localhost:3000/api/docs
 
 ## Endpoints Principales
 
-# Autenticación
+### Autenticación
 
 ```bash
 POST   /api/auth/login          - Iniciar sesión
-POST   /api/auth/register       - Registrar usuario (opcional)
+
 ```
 
-# Usuarios
+### Usuarios
 
 ```bash
-GET /api/v1/usuario - Listar usuarios (ADMIN)
-GET /api/v1/usuario/:id - Obtener usuario por ID
-POST /api/v1/usuario - Crear usuario (ADMIN)
-PATCH /api/v1/usuario/:id - Actualizar usuario (ADMIN)
-DELETE /api/v1/usuario/:id - Eliminar usuario (ADMIN)
+GET /api/v1/usuarios - Listar usuarios (ADMIN)
+GET /api/v1/usuarios/:id - Obtener usuario por ID
+POST /api/v1/usuarios - Crear usuario (ADMIN)
+PATCH /api/v1/usuarios/:id - Actualizar usuario (ADMIN)
+DELETE /api/v1/usuarios/:id - Eliminar usuario (ADMIN)
 ```
+
+### Estudiantes
+
+```bash
+GET    /api/v1/estudiante       - Listar estudiantes
+GET    /api/v1/estudiante/:id   - Obtener estudiante por ID
+POST   /api/v1/estudiante       - Crear estudiante
+PATCH  /api/v1/estudiante/:id   - Actualizar estudiante
+DELETE /api/v1/estudiante/:id   - Eliminar estudiante
+
+```
+
+### Docentes
+
+```bash
+GET    /api/v1/docente          - Listar docentes
+GET    /api/v1/docente/:id      - Obtener docente por ID
+POST   /api/v1/docente          - Crear docente
+PATCH  /api/v1/docente/:id      - Actualizar docente
+DELETE /api/v1/docente/:id      - Eliminar docente
+```
+
+### Cursos
+
+```bash
+GET    /api/v1/cursos            - Listar cursos
+GET    /api/v1/cursos/:id        - Obtener curso por ID
+POST   /api/v1/cursos            - Crear curso
+PATCH  /api/v1/cursos/:id        - Actualizar curso
+DELETE /api/v1/cursos/:id        - Eliminar curso
+```
+
+### Evaluaciones
+
+```bash
+GET    /api/v1/evaluaciones       - Listar evaluaciones
+GET    /api/v1/evaluaciones/:id   - Obtener evaluación por ID
+POST   /api/v1/evaluaciones       - Crear evaluación
+PATCH  /api/v1/evaluaciones/:id   - Actualizar evaluación
+DELETE /api/v1/evaluaciones/:id   - Eliminar evaluación
+```
+
+### Inscripciones
+
+```bash
+GET    /api/v1/inscripciones      - Listar inscripciones
+GET    /api/v1/inscripciones/:id  - Obtener inscripción por ID
+POST   /api/v1/inscripciones      - Crear inscripción
+PATCH  /api/v1/inscripciones/:id  - Actualizar inscripción
+DELETE /api/v1/inscripciones/:id  - Eliminar inscripción
+```
+
+### Notas
+
+```bash
+GET    /api/v1/notas             - Listar notas
+GET    /api/v1/notas/:id         - Obtener nota por ID
+POST   /api/v1/notas             - Crear nota
+PATCH  /api/v1/notas/:id         - Actualizar nota
+DELETE /api/v1/notas/:id         - Eliminar nota
+```
+
+## 🔒 Seguridad
+
+Mejores Prácticas Implementadas
+
+✅ **Validación de entrada en backend y frontend**
+
+✅ **Autenticación JWT con expiración**
+
+✅ **CORS configurado**
+
+✅ **Protección contra inyección SQL**
+
+✅ **Rate limiting (configurable)**
+
+✅ **Headers de seguridad HTTP**
+
+✅ **Variables de entorno para datos sensibles**
+
+✅ **Hash de contraseñas con bcrypt**
+
+## 🙏 Agradecimientos
+
+✅ **NestJS**
+
+✅ **Angular**
+
+✅ **TypeORM**
+
+✅ **Tailwind CSS**
+
+✅ **Swagger**
