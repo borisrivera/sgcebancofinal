@@ -1,6 +1,6 @@
 <!-- header Animation -->
 <div align= "center"> 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=240&text=zMarco_hub%20GitHub&animation=fadeIn&fontColor=2a2828&fontSize=50" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=240&text=zMarco-hub%20GitHub&animation=fadeIn&fontColor=2a2828&fontSize=50" />
 </div>
 
 # Sistema de Gestión de Cursos y Estudiantes
@@ -11,7 +11,7 @@
     <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="150">
   </p>
 
-  <img src="https://readme-typing-svg.herokuapp.com?color=%236FDA44&size=30&center=true&vCenter=true&width=672&height=55&lines=Hola+somos+el+grupo+3+del+Diplomado;Full-Stack+Developer;Sistema+de+Gestion+de+Cursos+y+Estudiantes;" alt="Headline" />
+  <img src="https://readme-typing-svg.herokuapp.com?color=%236FDA44&size=30&center=true&vCenter=true&width=672&height=60&lines=Hola+somos+el+grupo+3+del+Diplomado;Full-Stack+Developer;Sistema+de+Gestion+de+Cursos+y+Estudiantes;" alt="Headline" />
 
 <br><br>
 
@@ -80,8 +80,8 @@ El proyecto tiene la siguiente estructura de carpetas:
 ├── backend/ # Backend implementado con NestJS
 ├── frontend/ # Frontend implementado con Angular
 ├── .env # Variables de entorno para el Backend
-├── README.md # Este archivo
-└── docker-compose.yml # Configuración para ejecutar el proyecto en contenedores Docker (opcional)
+└── README.md # Este archivo
+
 ```
 
 ## Backend
