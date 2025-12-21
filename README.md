@@ -68,8 +68,23 @@ Este proyecto es un **Sistema de Gestión de Cursos y Estudiantes** implementado
 
 Antes de comenzar, asegúrate de tener las siguientes herramientas instaladas en tu sistema:
 
-- **Node.js** (v22.x o superior) – [Instalar Node.js](https://nodejs.org/)
-- **npm** (v10.x o superior) – [Instalar npm](https://www.npmjs.com/get-npm)
+- **Node.js**
+  **_Versión de Node.js requerida_**
+
+      Mínimo: 18.19.1
+
+      Ideal: 20.11.1 o superior.
+
+**_Puedes verificar tu versión de Node.js con el siguiente comando:_**
+
+```bash
+node -v
+```
+
+**_Puedes descargar la versión más reciente de Node.js desde_**
+[Instalar Node.js](https://nodejs.org/)
+
+- **npm** (v6.11.0` o superior) – [Instalar npm](https://www.npmjs.com/get-npm)
 - **PostgreSQL** – [Instalar PostgreSQL](https://www.postgresql.org/download/)
 
 ## Estructura del Proyecto
@@ -84,7 +99,7 @@ El proyecto tiene la siguiente estructura de carpetas:
 
 ```
 
-## Backend
+# Backend
 
 ## 📦 Instalación
 
@@ -92,12 +107,15 @@ El proyecto tiene la siguiente estructura de carpetas:
 
 ```bash
 git clone https://github.com/zMarco-hub/sgce
+
+## Navegar al directorio
+cd /c/
 cd sgce
 ```
 
 ### 2. Configuración del Backend
 
-    Navega a la carpeta `backend/`:
+## Navega a la carpeta `backend/`:
 
 ```bash
  ## Navegar al directorio del backend
@@ -123,7 +141,17 @@ DATABASE_USER=usuario
 DATABASE_PASSWORD=contraseña
 ```
 
-### 3.Ejecución
+### 🗄️ 3. Configuración de la Base de Datos
+
+```bash
+-- Conectarse a PostgreSQL
+psql -U postgres
+
+-- Crear base de datos
+CREATE DATABASE sgce_db;
+```
+
+### 4.Ejecución
 
 Inicia la aplicación en modo de desarrollo:
 
@@ -131,7 +159,7 @@ Inicia la aplicación en modo de desarrollo:
 npm run start:dev
 ```
 
-### Frontend
+# Frontend
 
 ### 1. Instalación
 
@@ -160,16 +188,6 @@ ng serve
 El frontend estará disponible en
 
 http://localhost:4200
-
-# 🗄️ Configuración de la Base de Datos
-
-```bash
--- Conectarse a PostgreSQL
-psql -U postgres
-
--- Crear base de datos
-CREATE DATABASE sgce_db;
-```
 
 ## 📚 Documentación API
 
