@@ -94,44 +94,26 @@ El proyecto tiene la siguiente estructura de carpetas:
 ```bash
 ├── backend/ # Backend implementado con NestJS
 ├── frontend/ # Frontend implementado con Angular
-├── .env # Variables de entorno para el Backend
-└── README.md # Este archivo
+├── basededatos # La base de datos en postgres
+└── README.md # Archivo de instrucciones
 
 ```
 
-# Backend
-
-## 📦 Instalación
+## Instalacion y Ejecucion
 
 ### 1. Clonar el Repositorio
 
 ```bash
 git clone https://github.com/zMarco-hub/sgce
-
-## Navegar al directorio
-cd /c/
-cd sgce
 ```
 
-### 2. Configuración del Backend
-
-## Navega a la carpeta `backend/`:
-
-```bash
- ## Navegar al directorio del backend
-cd backend
-
-# Instalar dependencias
-npm install
-
-# Configurar variables de entorno
-cp .env.example .env
-
-```
-
-### 2. Configuración
+### 2. Configuración de las variables de entorno
 
 Asegúrate de tener configuradas las variables de entorno para la conexión a la base de datos PostgreSQL. Crea un archivo .env en la carpeta backend/ y agrega las siguientes variables:
+
+```bash
+cp .env.example .env
+```
 
 ```bash
 DATABASE_HOST=localhost
@@ -149,6 +131,29 @@ psql -U postgres
 
 -- Crear base de datos
 CREATE DATABASE sgce_db;
+```
+
+# Backend
+
+## 📦 Instalación
+
+## Navegar al directorio
+
+cd /c/
+cd sgce
+
+### 2. Configuración del Backend
+
+## Navega a la carpeta `backend/`:
+
+```bash
+ ## Navegar al directorio del backend
+cd backend
+
+# Instalar dependencias
+npm install
+
+
 ```
 
 ### 4.Ejecución
