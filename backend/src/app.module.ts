@@ -1,58 +1,41 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { RolModule } from './rol/rol.module';
-import { UsuarioModule } from './usuario/usuario.module';
-import { EstudianteModule } from './estudiante/estudiante.module';
-import { DocenteModule } from './docente/docente.module';
-import { CursoModule } from './curso/curso.module';
-import { InscripcionModule } from './inscripcion/inscripcion.module';
-import { EvaluacionModule } from './evaluacion/evaluacion.module';
-import { NotaModule } from './nota/nota.module';
-import { AuthModule } from './auth/auth.module';
-import * as path from 'path';
+
+import { Cliente } from './clientes/cliente.entity';
+import { Cuenta } from './cuentas/cuenta.entity';
+import { Movimiento } from './movimientos/movimiento.entity';
+
+import { ClientesModule } from './clientes/clientes.module';
+import { CuentasModule } from './cuentas/cuentas.module';
+import { MovimientosModule } from './movimientos/movimientos.module';
 
 @Module({
   imports: [
-    // ✅ Cargar variables del archivo .env
+    // 🌱 Variables de entorno
     ConfigModule.forRoot({
-      isGlobal: true, // Hace disponibles todas las variables
-      envFilePath: path.resolve(__dirname, '../.env'), // Ruta al archivo .env fuera de la carpeta backend
+      isGlobal: true,
     }),
 
-    // ✅ Configurar conexión con PostgreSQL
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.DB_HOST,
-      port: Number(process.env.DB_PORT),
-      username: process.env.DB_USER,
-      password: process.env.DB_PASS,
-      database: process.env.DB_NAME,
-      autoLoadEntities: true,
-      synchronize: true,
+    // 🗄️ Base de datos
+    TypeOrmModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({
+        type: 'postgres',
+        host: config.get<string>('DB_HOST'),
+        port: Number(config.get<string>('DB_PORT') ?? 5432),
+        username: config.get<string>('DB_USER'),
+        password: config.get<string>('DB_PASS'),
+        database: config.get<string>('DB_NAME'),
+        entities: [Cliente, Cuenta, Movimiento],
+        synchronize: true, // ✅ solo para desarrollo / prueba
+      }),
     }),
 
-    RolModule,
-
-    UsuarioModule,
-
-    EstudianteModule,
-
-    DocenteModule,
-
-    CursoModule,
-
-    InscripcionModule,
-
-    EvaluacionModule,
-
-    NotaModule,
-
-    AuthModule,
+    // 📦 Módulos del sistema
+    ClientesModule,
+    CuentasModule,
+    MovimientosModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}

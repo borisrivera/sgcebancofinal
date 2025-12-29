@@ -1,42 +1,30 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
-async function bootstrap() {
+async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule);
 
-  // ✅ Validaciones globales
-  app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
-
+  // ✅ CORS para frontend (Vite)
   app.enableCors({
-    origin: 'http://localhost:4200',
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    origin: ['http://localhost:5173', 'http://localhost:5174'],
     credentials: true,
   });
 
-  // ✅ Prefijo global (todas las rutas iniciarán con /api/v1)
-  app.setGlobalPrefix('api/v1');
-
-  // ✅ Configuración de Swagger
+  // ✅ CONFIGURACIÓN SWAGGER
   const config = new DocumentBuilder()
-    .setTitle('SGCE - Cursos y Estudiantes')
-    .setDescription('API académica con Auth/JWT y roles')
+    .setTitle('Bank Fullstack API')
+    .setDescription('API del sistema bancario (Clientes, Cuentas, Movimientos)')
     .setVersion('1.0')
-    .addBearerAuth()
-    .setExternalDoc(
-      'Repositorio en GitHub', // Título que se verá en Swagger
-      'https://github.com/zMarco-hub/sgce', // Enlace a tu repositorio
-    )
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api/docs', app, document, {
-    swaggerOptions: { persistAuthorization: true },
-  });
+  SwaggerModule.setup('api', app, document);
 
-  // ✅ Puerto desde .env o por defecto 3000
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(3001);
+
+  console.log('🚀 Backend corriendo en http://localhost:3001');
+  console.log('📘 Swagger disponible en http://localhost:3001/api');
 }
-bootstrap();
+
+void bootstrap();

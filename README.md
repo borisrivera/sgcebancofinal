@@ -1,347 +1,206 @@
-<!-- header Animation -->
-<div align= "center"> 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=240&text=Grupo+3%20GitHub&animation=fadeIn&fontColor=2a2828&fontSize=50" />
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Banco Full Stack - Proyecto Final</title>
+</head>
+<body>
 
-# Sistema de Gestión de Cursos y Estudiantes
+  <h1>🏦 Banco Full Stack proyecto final 🏦</h1>
 
-<div align="center">
-
-  <p align="center">
-    <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="150">
+  <p>
+    Proyecto Full Stack desarrollado como prueba práctica Backend / Frontend,
+    que permite la gestión de Clientes y Cuentas Bancarias, cumpliendo con todos
+    los requisitos solicitados.
   </p>
 
- <img src="https://readme-typing-svg.herokuapp.com?color=%236FDA44&size=30&center=true&vCenter=true&width=690&height=55&lines=Hola+somos+el+grupo+3+del+Diplomado;Full-Stack+Developer;Sistema+de+Gestion+de+Cursos+y+Estudiantes;" alt="Texto animado del Grupo 3 Full-Stack Developer - Sistema de Gestión de Cursos y Estudiantes" />
+  <h2>📌 Tecnologías utilizadas</h2>
 
-<br><br>
+  <h3>Backend</h3>
+  <ul>
+    <li>NestJS (TypeScript)</li>
+    <li>PostgreSQL</li>
+    <li>TypeORM</li>
+    <li>Swagger (documentación automática)</li>
+  </ul>
 
+  <h3>Frontend</h3>
+  <ul>
+    <li>React</li>
+    <li>TypeScript</li>
+    <li>Vite</li>
+    <li>Axios</li>
+    <li>React Router DOM</li>
+  </ul>
+
+  <h2>📁 Estructura del proyecto</h2>
+
+  <pre>
+bancof/
+│
+├── backend/     # API REST con NestJS
+├── frontend/    # Aplicación web con React
+└── README.md
+  </pre>
+
+  <h2>⚙️ Requisitos previos</h2>
+  <ul>
+    <li>Node.js v18 o superior</li>
+    <li>PostgreSQL</li>
+    <li>npm</li>
+  </ul>
+
+  <h2>🚀 Instalación y ejecución</h2>
+
+  <h3>🔹 Backend</h3>
+  <pre>
+cd backend
+npm install
+npm run start:dev
+  </pre>
+
+  <p>El backend se ejecuta en:</p>
+  <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+
+  <h3>📘 Documentación API (Swagger)</h3>
+  <p>Disponible en:</p>
+  <a href="http://localhost:3000/api/docs" target="_blank">
+    http://localhost:3000/api/docs
+  </a>
+
+  <h3>🔹 Frontend</h3>
+  <pre>
+cd frontend
+npm install
+npm run dev
+  </pre>
+
+  <p>El frontend se ejecuta en:</p>
+  <a href="http://localhost:5173" target="_blank">http://localhost:5173</a>
+
+  <h2>🗄️ Configuración de la Base de Datos</h2>
+
+  <p>Crear base de datos en PostgreSQL:</p>
+  <pre>
+CREATE DATABASE bancodb;
+  </pre>
+
+  <p>Configurar credenciales en el archivo <strong>.env</strong> del backend:</p>
+  <pre>
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=tu_password
+DB_NAME=bancodb
+  </pre>
+
+  <h3>Restaurar Base de Datos</h3>
+  <ul>
+    <li>El proyecto utiliza TypeORM</li>
+    <li>Las tablas se generan automáticamente al iniciar el backend</li>
+    <li>No es necesario archivo .sql</li>
+  </ul>
+
+  <h2>🧩 Entidades principales</h2>
+
+  <h3>Cliente</h3>
+  <ul>
+    <li>id</li>
+    <li>nombre</li>
+    <li>paterno</li>
+    <li>materno</li>
+    <li>tipo_documento</li>
+    <li>documento_identidad</li>
+    <li>fecha_nacimiento</li>
+    <li>genero</li>
+    <li>fecha_creacion</li>
+  </ul>
+
+  <h3>Cuenta</h3>
+  <ul>
+    <li>id</li>
+    <li>cliente_id</li>
+    <li>tipo_producto</li>
+    <li>numero_cuenta (único)</li>
+    <li>moneda (BOB, USD)</li>
+    <li>monto</li>
+    <li>fecha_creacion</li>
+    <li>sucursal</li>
+  </ul>
+
+  <h2>🔗 Endpoints implementados</h2>
+
+  <h3>Clientes</h3>
+  <ul>
+    <li>POST /clientes — Crear cliente</li>
+    <li>GET /clientes — Listar clientes</li>
+    <li>GET /clientes/:id — Obtener cliente con cuentas</li>
+    <li>PUT /clientes/:id — Actualizar cliente</li>
+    <li>DELETE /clientes/:id — Eliminar cliente (soft delete)</li>
+  </ul>
+
+  <h3>Cuentas</h3>
+  <ul>
+    <li>POST /clientes/:id/cuentas — Crear cuenta</li>
+    <li>GET /clientes/:id/cuentas — Listar cuentas del cliente</li>
+    <li>GET /cuentas/:id — Obtener cuenta</li>
+    <li>PUT /cuentas/:id — Actualizar cuenta</li>
+    <li>DELETE /cuentas/:id — Eliminar cuenta</li>
+  </ul>
+
+  <h2>🖥️ Funcionalidades del Frontend</h2>
+
+  <h3>Gestión de Clientes /clientes</h3>
+  <ul>
+    <li>Listar clientes</li>
+    <li>Crear cliente</li>
+    <li>Editar cliente</li>
+    <li>Eliminar cliente</li>
+    <li>Ver detalle del cliente con sus cuentas</li>
+  </ul>
+
+  <h3>Gestión de Cuentas /clientes/:id/cuentas</h3>
+  <ul>
+    <li>Listar cuentas del cliente</li>
+    <li>Crear cuenta bancaria</li>
+    <li>Editar cuenta</li>
+    <li>Eliminar cuenta</li>
+  </ul>
+
+  <h2>📬 Instrucciones de Entrega</h2>
+
+  <p><strong>📌 Repositorio público:</strong></p>
+  <p>h</p>
+
+  <p><strong>Fecha límite:</strong></p>
+  <p>🗓️ 28 de diciembre de 2025 — 23:59</p>
+
+  <p><strong>✉️ Correo de envío:</strong></p>
+  <p>✉️ cesarnvf.academia.bo@gmail.com</p>
+
+  <h2>👤 Contacto</h2>
+
+  <div align="center">
+    <a href="https://www.linkedin.com/in/marco" target="_blank">Marco</a> |
+    <a href="https://www.linkedin.com/in/alain" target="_blank">Alain</a> |
+    <a href="https://www.linkedin.com/in/boris" target="_blank">Boris</a>
   </div>
 
-Este proyecto es un **Sistema de Gestión de Cursos y Estudiantes** implementado con un **backend** usando **NestJS**, **PostgreSQL** como base de datos, y **TypeORM** como ORM. El **frontend** está desarrollado con **Angular 21** y **TailwindCSS 4**. El sistema permite la gestión de cursos, estudiantes, inscripciones, y evaluaciones de manera eficiente.
-
-# 🚀 Características del Proyecto
-
-## Backend (NestJS)
-
-- ✅ **Arquitectura modular y escalable**
-- ✅ **API RESTful** con TypeScript
-- ✅ **Autenticación JWT** con roles
-- ✅ **Persistencia** con PostgreSQL y TypeORM
-- ✅ **Documentación automática** con Swagger
-- ✅ **Validación de datos** con `class-validator`
-- ✅ **Manejo de errores global** en toda la aplicación
-- ✅ **Seeds** para datos iniciales
-
-## Frontend (Angular 21)
-
-- ✅ **Aplicación SPA** con Angular
-- ✅ **Gestión de estado** con Signals
-- ✅ **Control Flow** con `@if` y `@for`
-- ✅ **Diseño responsive** con Tailwind CSS 4
-- ✅ **Tema oscuro** con acentos verdes
-- ✅ **Autenticación y autorización**
-- ✅ **CRUD completo** para todas las entidades
-
-## Base de Datos (PostgreSQL)
-
-- ✅ **Modelo relacional completo**
-- ✅ **Migraciones** con TypeORM
-- ✅ **Relaciones 1:1, 1:N y N:M**
-- ✅ **Índices optimizados** para mejorar el rendimiento
-- ✅ **Validación a nivel de base de datos** para integridad de datos
-
-## Tecnologías
-
-### Backend
-
-| ![NestJS](https://raw.githubusercontent.com/tandpfun/skill-icons/master/icons/NestJS-Dark.svg) | ![PostgreSQL](https://raw.githubusercontent.com/tandpfun/skill-icons/master/icons/PostgreSQL-Dark.svg) | ![TypeORM](https://raw.githubusercontent.com/tandpfun/skill-icons/master/icons/TypeORM-Dark.svg) |
-| :--------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
-|                                 [NestJS](https://nestjs.com/)                                  |                               [PostgreSQL](https://www.postgresql.org/)                                |                                  [TypeORM](https://typeorm.io/)                                  |
-
-### Frontend
-
-| ![Angular](https://raw.githubusercontent.com/tandpfun/skill-icons/master/icons/Angular-Dark.svg) | ![Tailwind](https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/TailwindCSS-Dark.svg) |
-| :----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
-|                                [Angular 21](https://angular.io/)                                 |                                                 [TailwindCSS](https://tailwindcss.com/)                                                 |
-
-## Requisitos
-
-Antes de comenzar, asegúrate de tener las siguientes herramientas instaladas en tu sistema:
-
-- **Node.js**
-  **_Versión de Node.js requerida_**
-
-      Mínimo: 18.19.1
-
-      Ideal: 20.11.1 o superior.
-
-**_Puedes verificar tu versión de Node.js con el siguiente comando:_**
-
-```bash
-node -v
-```
-
-**_Puedes descargar la versión más reciente de Node.js desde_**
-[Instalar Node.js](https://nodejs.org/)
-
-- **npm** (v6.11.0` o superior) – [Instalar npm](https://www.npmjs.com/get-npm)
-- **PostgreSQL** – [Instalar PostgreSQL](https://www.postgresql.org/download/)
-
-## Estructura del Proyecto
-
-El proyecto tiene la siguiente estructura de carpetas:
-
-```bash
-├── backend/ # Backend implementado con NestJS
-├── frontend/ # Frontend implementado con Angular
-├── basededatos # La base de datos en postgres
-└── README.md # Archivo de instrucciones
-
-```
-
-## Instalacion y Ejecucion
-
-### 1. Clonar el Repositorio
-
-```bash
-git clone https://github.com/zMarco-hub/sgce
-```
-
-### 2. Configuración de las variables de entorno
-
-Asegúrate de tener configuradas las variables de entorno para la conexión a la base de datos PostgreSQL. Crea un archivo .env en la carpeta backend/ y agrega las siguientes variables:
-
-```bash
-cp .env.example .env
-```
-
-```bash
-DATABASE_HOST=localhost
-DATABASE_PORT=5432
-DATABASE_NAME=nombre_de_tu_base_de_datos
-DATABASE_USER=usuario
-DATABASE_PASSWORD=contraseña
-```
-
-### 🗄️ 3. Configuración de la Base de Datos
-
-```bash
--- Conectarse a PostgreSQL
-psql -U postgres
-
--- Crear base de datos
-CREATE DATABASE sgce_db;
-```
-
-# Backend
-
-## 📦 Instalación
-
-## Navegar al directorio
-
-cd /c/
-cd sgce
-
-### 2. Configuración del Backend
-
-## Navega a la carpeta `backend/`:
-
-```bash
- ## Navegar al directorio del backend
-cd backend
-
-# Instalar dependencias
-npm install
-
-
-```
-
-### 4.Ejecución
-
-Inicia la aplicación en modo de desarrollo:
-
-```bash
-npm run start:dev
-```
-
-# Frontend
-
-### 1. Instalación
-
-Navega a la carpeta frontend/:
-
-```bash
-cd frontend
-```
-
-Instala las dependencias del proyecto:
-
-```bash
-npm install
-```
-
-### 2. Ejecución
-
-Inicia la aplicación en modo de desarrollo:
-
-```bash
-npm start
-# o
-ng serve
-```
-
-El frontend estará disponible en
-
-http://localhost:4200
-
-## 📚 Documentación API
-
-Una vez que el backend esté ejecutándose, la documentación Swagger estará disponible en:
-
-http://localhost:3000/api/docs
-
-## Endpoints Principales
-
-### Autenticación
-
-```bash
-POST   /api/auth/login          - Iniciar sesión
-
-```
-
-### Usuarios
-
-```bash
-GET /api/v1/usuarios - Listar usuarios (ADMIN)
-GET /api/v1/usuarios/:id - Obtener usuario por ID
-POST /api/v1/usuarios - Crear usuario (ADMIN)
-PATCH /api/v1/usuarios/:id - Actualizar usuario (ADMIN)
-DELETE /api/v1/usuarios/:id - Eliminar usuario (ADMIN)
-```
-
-### Estudiantes
-
-```bash
-GET    /api/v1/estudiante       - Listar estudiantes
-GET    /api/v1/estudiante/:id   - Obtener estudiante por ID
-POST   /api/v1/estudiante       - Crear estudiante
-PATCH  /api/v1/estudiante/:id   - Actualizar estudiante
-DELETE /api/v1/estudiante/:id   - Eliminar estudiante
-
-```
-
-### Docentes
-
-```bash
-GET    /api/v1/docente          - Listar docentes
-GET    /api/v1/docente/:id      - Obtener docente por ID
-POST   /api/v1/docente          - Crear docente
-PATCH  /api/v1/docente/:id      - Actualizar docente
-DELETE /api/v1/docente/:id      - Eliminar docente
-```
-
-### Cursos
-
-```bash
-GET    /api/v1/cursos            - Listar cursos
-GET    /api/v1/cursos/:id        - Obtener curso por ID
-POST   /api/v1/cursos            - Crear curso
-PATCH  /api/v1/cursos/:id        - Actualizar curso
-DELETE /api/v1/cursos/:id        - Eliminar curso
-```
-
-### Evaluaciones
-
-```bash
-GET    /api/v1/evaluaciones       - Listar evaluaciones
-GET    /api/v1/evaluaciones/:id   - Obtener evaluación por ID
-POST   /api/v1/evaluaciones       - Crear evaluación
-PATCH  /api/v1/evaluaciones/:id   - Actualizar evaluación
-DELETE /api/v1/evaluaciones/:id   - Eliminar evaluación
-```
-
-### Inscripciones
-
-```bash
-GET    /api/v1/inscripciones      - Listar inscripciones
-GET    /api/v1/inscripciones/:id  - Obtener inscripción por ID
-POST   /api/v1/inscripciones      - Crear inscripción
-PATCH  /api/v1/inscripciones/:id  - Actualizar inscripción
-DELETE /api/v1/inscripciones/:id  - Eliminar inscripción
-```
-
-### Notas
-
-```bash
-GET    /api/v1/notas             - Listar notas
-GET    /api/v1/notas/:id         - Obtener nota por ID
-POST   /api/v1/notas             - Crear nota
-PATCH  /api/v1/notas/:id         - Actualizar nota
-DELETE /api/v1/notas/:id         - Eliminar nota
-```
-
-## 🔒 Seguridad
-
-Mejores Prácticas Implementadas
-
-✅ **Validación de entrada en backend y frontend**
-
-✅ **Autenticación JWT con expiración**
-
-✅ **CORS configurado**
-
-✅ **Protección contra inyección SQL**
-
-✅ **Rate limiting (configurable)**
-
-✅ **Headers de seguridad HTTP**
-
-✅ **Variables de entorno para datos sensibles**
-
-✅ **Hash de contraseñas con bcrypt**
-
-## 🙏 Agradecimientos
-
-✅ **NestJS**
-
-✅ **Angular**
-
-✅ **TypeORM**
-
-✅ **Tailwind CSS**
-
-✅ **Swagger**
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zMarco-hub&langs_count=8&layout=compact&title_color=6FDA44&text_color=FFFFFF&theme=algolia" width="550" alt="Top Languages">
-</p>
-
-## 👨‍💻 Author
-
-<div align="center">
-
-[![Marco](https://img.shields.io/badge/Marco-FF5733?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marco)
-[![Alain](https://img.shields.io/badge/Alain-33FF57?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alain)
-[![Boris](https://img.shields.io/badge/Boris-FF33A1?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/boris)
-[![Leonardo](https://img.shields.io/badge/Leonardo-FFB533?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonardo)
-[![Omar](https://img.shields.io/badge/Omar-33A1FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar)
-[![Luis](https://img.shields.io/badge/Luis-9C33FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luis)
-
-</div>
-
-### Alain Boris Condori Flores
-
-### Leonarde Tellez Alcaba
-
-### Jhon Boris Rivera Caceres
-
-### Luis Ventura Sánchez
-
-### Omar Aramayo
-
-### Marcos Luis Herrera Beltran
-
-<!-- Footer Animation -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=9370DB&height=100&section=footer" width="100%"/>
-</div>
+  <h3>Alain Boris Condori Flores</h3>
+  <h3>Jhon Boris Rivera Caceres</h3>
+  <h3>Marcos Luis Herrera Beltran</h3>
+
+  <p><strong>Correo:</strong> cesarnvf.academia.bo@gmail.com</p>
+
+  <h2>✅ Estado del proyecto</h2>
+  <ul>
+    <li>✔️ Backend completo</li>
+    <li>✔️ Frontend completo</li>
+    <li>✔️ Swagger funcional</li>
+    <li>✔️ PostgreSQL integrado</li>
+    <li>✔️ CRUD Clientes y Cuentas</li>
+    <li>✔️ Repositorio público</li>
+  </ul>
+
+</body>
+</html>
