@@ -189,6 +189,9 @@ DB_NAME=bancodb
   <h3>Alain Boris Condori Flores</h3>
   <h3>Jhon Boris Rivera Caceres</h3>
   <h3>Marcos Luis Herrera Beltran</h3>
+		<h3> Luis Ventura Sanchez</h3>
+<h3> Cimar lopez</h3>
+<h3>Leonardo antonio tellez</h3>
 
   <p><strong>Correo:</strong> cesarnvf.academia.bo@gmail.com</p>
 
